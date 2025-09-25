@@ -1,0 +1,130 @@
+/* Revised with AI: Improved color contrast, spacing, and navigation clarity */
+
+body {
+    background: linear-gradient(120deg, #f7fafc 0%, #ffe4ec 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2d2d2d;
+}
+
+header {
+    background: #f6d6e1;
+    padding: 32px 0 16px 0;
+    box-shadow: 0 2px 8px #f6d6e180;
+}
+
+h1 {
+    color: #8e24aa;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #8e24aa;
+    border-bottom: 2px solid #8e24aa;
+    outline: none;
+}
+
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #f6d6e180;
+    padding: 40px 28px;
+}
+
+h2 {
+    color: #8e24aa;
+    margin-top: 28px;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: #2d2d2d;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 1.13em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+ul, ol {
+    text-align: left;
+    margin: 0 auto 20px auto;
+    max-width: 500px;
+    padding-left: 26px;
+}
+
+img {
+    display: block;
+    margin: 22px auto;
+    border-radius: 14px;
+    max-width: 220px;
+    box-shadow: 0 2px 12px #f6d6e180;
+    border: 2px solid #8e24aa;
+    background: #fff0fa;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#contact li {
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+a {
+    color: #8e24aa;
+    transition: color 0.2s;
+}
+
+a:hover,
+a:focus {
+    color: #2d2d2d;
+    text-decoration: underline;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 18px 4vw;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 14px;
+    }
+    img {
+        max-width: 90vw;
+    }
+}
