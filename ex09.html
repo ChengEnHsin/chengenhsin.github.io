@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Exercise 09 - Form UI</title>
+	<style>
+		:root{
+			--label-color:#1b2aa6;
+			--container-bg:#cfcfcf;
+			--input-border:#999;
+		}
+		body{
+			font-family: Arial, Helvetica, sans-serif;
+			background:#efefef;
+			padding:28px;
+			color:#111;
+		}
+		.form-container{
+			max-width:760px;
+			background:var(--container-bg);
+			padding:22px 26px;
+			border-radius:4px;
+			box-sizing:border-box;
+		}
+		.form-row{
+			display:flex;
+			align-items:flex-start;
+			gap:12px;
+			margin-bottom:16px;
+		}
+		.form-row label{
+			width:220px;
+			color:var(--label-color);
+			font-size:24px;
+			font-weight:600;
+			line-height:1.1;
+			padding-top:6px;
+		}
+		.field{ flex:1; }
+		input[type="text"], input[type="email"], select, textarea{
+			width:100%;
+			padding:8px 10px;
+			font-size:16px;
+			border:1px solid var(--input-border);
+			border-radius:4px;
+			box-sizing:border-box;
+		}
+		input[type="text"]::placeholder, input[type="email"]::placeholder{
+			color:#777;
+		}
+		.gender{ display:flex; gap:18px; align-items:center; font-size:18px; color:#123; }
+		.checkbox-list{ display:flex; flex-direction:column; gap:8px; color:var(--label-color); font-size:22px; }
+		.checkbox-list label{ font-weight:500; }
+		select{ width:120px; }
+		textarea{ min-height:110px; font-family:monospace; font-size:16px; padding:10px; }
+		.icon-buttons{ display:flex; gap:12px; margin-top:12px; }
+		.icon-buttons button{
+			width:60px;
+			height:52px;
+			border:1px solid #bdbdbd;
+			background:white;
+			border-radius:6px;
+			display:inline-flex;
+			align-items:center;
+			justify-content:center;
+			cursor:pointer;
+		}
+		.spacer{ height:6px }
+		@media (max-width:640px){
+			.form-row{ flex-direction:column; }
+			.form-row label{ width:100%; }
+		}
+	</style>
+</head>
+<body>
+	<div class="form-container">
+		<form aria-label="Sample form">
+			<div class="form-row">
+				<label for="last">Last Name:</label>
+				<div class="field"><input id="last" name="last" type="text" placeholder="Last name" /></div>
+			</div>
+
+			<div class="form-row">
+				<label for="first">First Name:</label>
+				<div class="field"><input id="first" name="first" type="text" placeholder="First name" /></div>
+			</div>
+
+			<div class="form-row">
+				<label for="email">Email:</label>
+				<div class="field"><input id="email" name="email" type="email" placeholder="Email address" /></div>
+			</div>
+
+			<div class="form-row">
+				<label>Gender:</label>
+				<div class="field gender">
+					<label><input type="radio" name="gender" value="male" />&nbsp;Male</label>
+					<label><input type="radio" name="gender" value="female" />&nbsp;Female</label>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<label>My favorite topics are:</label>
+				<div class="field checkbox-list">
+					<label><input type="checkbox" name="topic" value="html" />&nbsp;HTML</label>
+					<label><input type="checkbox" name="topic" value="css" />&nbsp;CSS</label>
+					<label><input type="checkbox" name="topic" value="js" />&nbsp;JavaScript</label>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<label for="grade">Which grade do you expect to receive?</label>
+				<div class="field" style="display:flex; justify-content:flex-start; align-items:flex-start;">
+					<select id="grade" name="grade" aria-label="expected grade">
+						<option>A</option>
+						<option>A-</option>
+						<option>B+</option>
+						<option>B</option>
+						<option>B-</option>
+						<option>C+</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<label for="comment">Leave a comment:</label>
+				<div class="field"><textarea id="comment" name="comment" placeholder="Enter your comment here..."></textarea></div>
+			</div>
+
+			<div class="spacer"></div>
+			<div class="icon-buttons" role="group" aria-label="actions">
+				<button type="button" title="send">
+					
+					<svg width="36" height="28" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<rect x="1" y="3" width="34" height="22" rx="3" fill="#f6d57e" stroke="#b88f2b" />
+						<path d="M3 5l15 11L33 5" fill="none" stroke="#7a4d14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
+
+				<button type="button" title="refresh">
+		
+					<svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<path d="M21 12a9 9 0 10-3.1 6.6L20 21v-6h-6l1.8 1.8A7 7 0 1121 12z" fill="#d9534f" />
+						<path d="M5 6v6h6" fill="#5cb85c" transform="translate(0 0)" />
+					</svg>
+				</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+
