@@ -3,17 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Chloe Hsin — Projects & Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+      :root{--bg-dark:#071022;--muted:#bfcbd6;--accent:#7df9ff;--accent-2:#8a7bff}
+      *{box-sizing:border-box}
+      body{font-family:Inter,Segoe UI,Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(180deg,var(--bg-dark) 0%, #021018 60%);color:var(--muted);-webkit-font-smoothing:antialiased;line-height:1.6}
+      .container{max-width:1000px;margin:32px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 36px rgba(2,6,23,0.6)}
+      header{margin-bottom:32px;text-align:center}
+      h1{font-family:Orbitron, Inter, sans-serif;color:var(--accent);margin:0 0 12px;font-size:2rem;letter-spacing:0.8px;text-shadow:0 2px 20px rgba(125,249,255,0.06)}
+      .subtitle{color:#9fb0c0;font-size:1.1rem;margin:0}
+      .links-section{margin:32px 0}
+      .links-section h2{color:var(--accent-2);font-size:1.2rem;margin:20px 0 16px;letter-spacing:0.3px}
+      .link-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px}
+      .card{background:linear-gradient(135deg, rgba(125,249,255,0.04), rgba(138,123,255,0.02));border:1px solid rgba(125,249,255,0.08);border-radius:10px;padding:20px;transition:all 0.3s ease;position:relative;overflow:hidden}
+      .card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, transparent 0%, rgba(125,249,255,0.05) 100%);opacity:0;transition:opacity 0.3s}
+      .card:hover{border-color:rgba(125,249,255,0.15);box-shadow:0 8px 24px rgba(125,249,255,0.08);transform:translateY(-2px)}
+      .card:hover::before{opacity:1}
+      .card-title{color:var(--accent);font-weight:600;font-size:1.05rem;margin:0 0 8px}
+      .card-desc{color:#9fb0c0;font-size:0.95rem;margin:0 0 12px}
+      .card a{color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:0.2s}
+      .card a:hover{color:#fff;text-decoration:underline}
+      .card-icon{font-size:1.5rem;color:var(--accent-2)}
+      .external{color:var(--accent-2)}
+      footer{margin-top:40px;text-align:center;color:#7b8a96;font-size:0.9rem;padding-top:20px;border-top:1px solid rgba(255,255,255,0.05)}
+      footer a{color:var(--muted);text-decoration:none;transition:0.2s}
+      footer a:hover{color:var(--accent)}
+      @media(max-width:768px){
+        .container{padding:16px}
+        h1{font-size:1.5rem}
+        .link-card{grid-template-columns:1fr}
+      }
+    </style>
 </head>
 <body>
-    <h1>My Links!</h1>
-    <ul>
-        <li><a href="https://www.babson.edu">Babson</a></li>
-        <li><a href="https://www.bostondance.org/">My Hobby</a></li>
-    <li><a href="cypher.html">cypher - when rhythm meets form</a></li>
-    </ul>
-    <footer>
-        <p><a href="sitemap.html">Sitemap</a></p>
-    </footer>
+    <div class="container">
+      <header>
+        <h1>✨ Chloe Hsin</h1>
+        <p class="subtitle">Exploring supply chain, design, and creative systems</p>
+      </header>
+
+      <section class="links-section">
+        <h2>📚 Academic & Learning</h2>
+        <div class="link-card">
+          <div class="card">
+            <div class="card-title">🔗 Supply Chain Applied Studies</div>
+            <p class="card-desc">Comparative analysis of electric vehicle supply chains in China and the U.S., with insights for retail management. A semester capstone project.</p>
+            <a href="supply-chain.html">Explore →</a>
+          </div>
+          <div class="card">
+            <div class="card-title">🎓 Babson College</div>
+            <p class="card-desc">My academic home, exploring business, entrepreneurship, and operations management.</p>
+            <a href="https://www.babson.edu" class="external" target="_blank">Visit →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="links-section">
+        <h2>🎨 Creative Projects</h2>
+        <div class="link-card">
+          <div class="card">
+            <div class="card-title">🎵 Cypher</div>
+            <p class="card-desc">When rhythm meets form — exploring the intersection of music, movement, and design.</p>
+            <a href="cypher.html">View →</a>
+          </div>
+          <div class="card">
+            <div class="card-title">💃 My Hobby</div>
+            <p class="card-desc">Dance and movement — my creative passion and community.</p>
+            <a href="https://www.bostondance.org/" class="external" target="_blank">Discover →</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p><a href="sitemap.html">Sitemap</a> · © 2024 Chloe Hsin</p>
+      </footer>
+    </div>
 </body>
 </html>
