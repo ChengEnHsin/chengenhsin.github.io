@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cypher Dance Network — Jobs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">
+        <a class="brand-link" href="cyphersite.html">
+          <span class="logo-badge" aria-hidden="true">CD</span>
+          <span class="brand-text">Cypher Dance Network</span>
+        </a>
+      </div>
+      <button class="menu-toggle btn ghost" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a class="nav-link" href="cyphersite.html"><span class="icon" aria-hidden="true">🏠</span> Network</a>
+        <a class="nav-link" href="portfolio.html"><span class="icon" aria-hidden="true">🎭</span> Portfolio</a>
+        <a class="nav-link" href="jobs.html"><span class="icon" aria-hidden="true">💼</span> Jobs</a>
+        <a class="nav-link" href="messages.html"><span class="icon" aria-hidden="true">✉️</span> Messages</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Post a Job</h2>
+      <div class="form-row">
+        <label for="jobTitle">Job title</label>
+        <input id="jobTitle" placeholder="Job title (e.g., Background Dancers)" />
+      </div>
+      <div class="row">
+        <div style="flex:1">
+          <label for="jobLoc">Location</label>
+          <input id="jobLoc" placeholder="Location" />
+        </div>
+        <div style="width:140px">
+          <label for="jobStyle">Style</label>
+          <input id="jobStyle" placeholder="Style required" />
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="jobDesc">Description & contact</label>
+        <textarea id="jobDesc" placeholder="Job description and contact info"></textarea>
+      </div>
+      <div class="row">
+        <button id="postJobBtn" class="btn primary">Post job</button>
+      </div>
+    </section>
+
+    <section class="jobs-list">
+      <h2>Open listings</h2>
+      <div id="jobsContainer" class="jobs-grid">
+        <div class="job-item" tabindex="0">
+          <div class="row">
+            <div style="width:64px;flex-shrink:0"><div class="avatar">BD</div></div>
+            <div style="flex:1">
+              <strong>Background Dancers — Tour (6x)</strong>
+              <div class="meta">Commercial • NYC</div>
+              <p class="small" style="margin-top:8px">Hiring 6 dancers for a concert tour across the East Coast. Send reel + availability to bookings@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="job-item" tabindex="0">
+          <div class="row">
+            <div style="width:64px;flex-shrink:0"><div class="avatar">CE</div></div>
+            <div style="flex:1">
+              <strong>Contemporary Ensemble</strong>
+              <div class="meta">Contemporary • Remote auditions</div>
+              <p class="small" style="margin-top:8px">Auditions open for contemporary ensemble; submit videos by Jan 10.</p>
+            </div>
+          </div>
+        </div>
+        <div class="job-item" tabindex="0">
+          <div class="row">
+            <div style="width:64px;flex-shrink:0"><div class="avatar">MV</div></div>
+            <div style="flex:1">
+              <strong>Music Video Feature</strong>
+              <div class="meta">Hip-hop/Commercial • Los Angeles</div>
+              <p class="small" style="margin-top:8px">Paid gig — shooting March 2025. Must have own wardrobe.</p>
+            </div>
+          </div>
+        </div>
+        <div class="job-item" tabindex="0">
+          <div class="row">
+            <div style="width:64px;flex-shrink:0"><div class="avatar">BF</div></div>
+            <div style="flex:1">
+              <strong>Background Dancers — Festival</strong>
+              <div class="meta">Various • Austin, TX</div>
+              <p class="small" style="margin-top:8px">One-day gig for festival performance. $150 flat. Email festival@events.example</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Cypher Dance Network</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof initJobs === 'function') initJobs();
+    });
+  </script>
+</body>
+</html>

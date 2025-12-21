@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+/* Enhanced UI for Cypher Dance Network — improved tokens, spacing, and components */
+:root{
+  --max-w:980px;
+  --bg:#f5f7fb;
+  --surface:#ffffff;
+  --muted:#6b6f76;
+  --text:#111827;
+  --accent:#ff4d85; /* primary action */
+  --accent-2:#5ab0ff; /* secondary accent */
+  --success:#35b36b;
+  --radius:10px;
+  --card-shadow: 0 6px 18px rgba(22,27,34,0.06);
+  --soft-shadow: 0 2px 6px rgba(22,27,34,0.04);
+  --gap:16px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;line-height:1.45;font-size:15px
+}
+.container{max-width:var(--max-w);margin:28px auto;padding:0 18px}
+
+/* Header */
+.site-header{position:sticky;top:0;background:rgba(255,255,255,0.96);backdrop-filter:saturate(120%) blur(6px);z-index:40;border-bottom:1px solid rgba(0,0,0,0.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.site-title{display:flex;align-items:center;gap:12px}
+.site-title a{color:var(--text);text-decoration:none;font-weight:600;font-size:18px}
+.logo-badge{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+
+/* Nav */
+.main-nav{display:flex;gap:10px;align-items:center}
+.menu-toggle{display:none;align-items:center;justify-content:center;font-size:18px}
+.nav-link{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;font-size:14px}
+.nav-link:hover{background:#f2f6fb;color:var(--text)}
+.nav-link:focus{outline:2px solid rgba(90,176,255,0.18);outline-offset:2px}
+.nav-link.active{background:linear-gradient(90deg,rgba(255,77,133,0.12),rgba(90,176,255,0.06));color:var(--accent)}
+.btn:focus{outline:2px solid rgba(255,77,133,0.12);outline-offset:2px}
+
+/* mobile nav open state */
+@media(max-width:900px){
+  .menu-toggle{display:inline-flex}
+  .main-nav{display:none}
+  .main-nav.open{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+}
+
+/* Card */
+.card{background:var(--surface);padding:18px;border-radius:var(--radius);margin-bottom:18px;box-shadow:var(--soft-shadow)}
+h2{margin:0 0 10px 0}
+.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+
+/* Forms & inputs */
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input, textarea, select{width:100%;padding:11px;border:1px solid rgba(0,0,0,0.07);border-radius:8px;background:linear-gradient(180deg,#fff,#fbfbfd);transition:box-shadow .15s,transform .15s;border-radius:8px}
+input:focus, textarea:focus, select:focus{outline:none;box-shadow:0 6px 20px rgba(90,176,255,0.12);border-color:var(--accent-2)}
+textarea{min-height:90px}
+
+/* Layout helpers */
+.row{display:flex;gap:12px}
+.row.space-between{display:flex;justify-content:space-between;gap:12px}
+.flex-col{display:flex;flex-direction:column}
+
+/* Buttons */
+.btn{padding:9px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);background:#fff;cursor:pointer;font-weight:600;transition:transform .12s ease,box-shadow .12s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--card-shadow)}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#fff}
+.btn.secondary{background:#fff;border:1px solid rgba(0,0,0,0.06)}
+.btn.ghost{background:transparent;border:none;color:var(--accent);padding:8px}
+.btn.full{display:block;width:100%}
+
+/* New item highlight animation */
+.flash{animation:flash .9s ease}
+@keyframes flash{0%{box-shadow:0 0 0 rgba(255,77,133,0.08)}50%{box-shadow:0 10px 30px rgba(255,77,133,0.14)}100%{box-shadow:none}}
+
+/* Listings & cards */
+.feed .post{padding:14px;margin-bottom:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfdff);box-shadow:var(--soft-shadow)}
+.post .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+.portfolio-grid,.jobs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.portfolio-item,.job-item,.thread-item{padding:12px;border-radius:10px;background:var(--surface);box-shadow:var(--soft-shadow);border:0}
+.job-item .meta, .portfolio-item .meta{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* Messages */
+.messages-main{display:grid;grid-template-columns:320px 1fr;gap:18px}
+.threads-list{display:flex;flex-direction:column;gap:8px}
+.thread-item{padding:10px;border-radius:8px;cursor:pointer}
+.thread-item:hover{background:#f6f9ff}
+.thread-item.active{background:linear-gradient(90deg,rgba(255,77,133,0.08),rgba(90,176,255,0.04))}
+.messages-box{min-height:240px;max-height:520px;overflow:auto;border-radius:8px;padding:12px;background:linear-gradient(180deg,#fbfcff,#ffffff)}
+.message{padding:10px;border-radius:12px;margin-bottom:10px;max-width:75%}
+.message.out{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;margin-left:auto}
+.message.in{background:#efefef;margin-right:auto}
+
+/* Avatar & icons */
+.avatar{width:42px;height:42px;border-radius:10px;background:#ddd;color:#333;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+.icon{width:18px;height:18px;display:inline-block;vertical-align:middle}
+
+/* Footer */
+.site-footer{padding:22px 0;text-align:center;color:var(--muted);font-size:14px}
+
+/* Utilities */
+.hidden{display:none}
+.center{display:flex;justify-content:center;align-items:center}
+
+/* small-screen helpers */
+.mobile-only{display:none}
+@media(max-width:900px){.mobile-only{display:inline-flex} .messages-list.hidden{display:none}}
+
+/* Toast notifications */
+.toast-wrap{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;flex-direction:column;gap:8px}
+.toast{min-width:200px;background:#1e293b;color:#fff;padding:10px 12px;border-radius:8px;box-shadow:var(--card-shadow);opacity:0;transform:translateY(12px);transition:opacity .22s ease,transform .22s ease}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast.success{background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+
+/* Responsive */
+@media(max-width:900px){.container{padding:0 14px}.messages-main{grid-template-columns:1fr}.header-inner{flex-direction:column;align-items:flex-start}.main-nav{margin-top:10px;gap:8px}}
+@media(max-width:520px){.site-title a{font-size:16px}.logo-badge{width:36px;height:36px;font-size:14px}.btn{padding:8px 10px}}

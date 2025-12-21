@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cypher Dance Network — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">
+        <a class="brand-link" href="cyphersite.html">
+          <span class="logo-badge" aria-hidden="true">CD</span>
+          <span class="brand-text">Cypher Dance Network</span>
+        </a>
+      </div>
+      <button class="menu-toggle btn ghost" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a class="nav-link" href="cyphersite.html">Network</a>
+        <a class="nav-link" href="portfolio.html">Portfolio</a>
+        <a class="nav-link" href="jobs.html">Jobs</a>
+        <a class="nav-link" href="messages.html">Messages</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="composer card">
+      <h2>Share an update</h2>
+      <div class="form-row">
+        <label for="postAuthor">Your name</label>
+        <input id="postAuthor" placeholder="Your name" aria-label="Your name" />
+      </div>
+      <div class="form-row">
+        <label for="postText">Update</label>
+        <textarea id="postText" placeholder="Share your latest performance, rehearsal, or booking..." aria-label="Share an update"></textarea>
+      </div>
+      <div class="row space-between">
+        <div class="small muted">Public • anyone can see this</div>
+        <button id="createPostBtn" class="btn primary">Post</button>
+      </div>
+    </section>
+
+    <section class="feed" id="feed">
+      <h2>Recent activity</h2>
+      <div id="postsContainer">
+        <article class="post card">
+          <div class="row">
+            <div style="width:56px;flex-shrink:0"><div class="avatar">AV</div></div>
+            <div style="flex:1"><div class="meta">Ava • Today</div><div>Big weekend performance at City Stage — crowd was lit!</div></div>
+          </div>
+        </article>
+        <article class="post card">
+          <div class="row">
+            <div style="width:56px;flex-shrink:0"><div class="avatar">MA</div></div>
+            <div style="flex:1"><div class="meta">Marco • Yesterday</div><div>Booked a sync for next Saturday — see you there!</div></div>
+          </div>
+        </article>
+        <article class="post card">
+          <div class="row">
+            <div style="width:56px;flex-shrink:0"><div class="avatar">SO</div></div>
+            <div style="flex:1"><div class="meta">Sofia • 2 days ago</div><div>Dropped a new rehearsal clip — open to collabs!</div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Cypher Dance Network</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Page-specific initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof initNetwork === 'function') initNetwork();
+    });
+  </script>
+</body>
+</html>

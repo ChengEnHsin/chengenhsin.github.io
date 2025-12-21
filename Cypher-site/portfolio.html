@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cypher Dance Network — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">
+        <a class="brand-link" href="cyphersite.html">
+          <span class="logo-badge" aria-hidden="true">CD</span>
+          <span class="brand-text">Cypher Dance Network</span>
+        </a>
+      </div>
+      <button class="menu-toggle btn ghost" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a class="nav-link" href="cyphersite.html">Network</a>
+        <a class="nav-link" href="portfolio.html">Portfolio</a>
+        <a class="nav-link" href="jobs.html">Jobs</a>
+        <a class="nav-link" href="messages.html">Messages</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Create portfolio item</h2>
+      <div class="form-row">
+        <label for="pfName">Work title</label>
+        <input id="pfName" placeholder="Work title (e.g., 'Festival Showcase')" />
+      </div>
+      <div class="row">
+        <div style="flex:1">
+          <label for="pfStyle">Style</label>
+          <input id="pfStyle" placeholder="Style (e.g., Hip-hop, Contemporary)" />
+        </div>
+        <div style="width:140px">
+          <label for="pfDate">Date</label>
+          <input id="pfDate" type="date" />
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="pfDesc">Description / credits</label>
+        <textarea id="pfDesc" placeholder="Describe your role, credits, or clips"></textarea>
+      </div>
+      <div class="row">
+        <button id="addPortfolioBtn" class="btn primary">Add to Portfolio</button>
+      </div>
+    </section>
+
+    <section class="portfolio-list" id="portfolioList">
+      <h2>Your portfolio</h2>
+      <div id="portfolioContainer" class="portfolio-grid">
+        <div class="portfolio-item" tabindex="0">
+          <div class="row">
+            <div style="width:64px;flex-shrink:0;"><div class="avatar">SF</div></div>
+            <div style="flex:1">
+              <strong>Street Festival — Ensemble</strong>
+              <div class="meta">Hip-hop • 2024-08-12</div>
+              <p class="small" style="margin-top:8px">Performed as part of the company ensemble; choreography by Lina.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" tabindex="0">
+          <div class="row">
+            <div style="width:64px;flex-shrink:0;"><div class="avatar">CS</div></div>
+            <div style="flex:1">
+              <strong>Contemporary Solo — "Falling Stars"</strong>
+              <div class="meta">Contemporary • 2023-11-02</div>
+              <p class="small" style="margin-top:8px">Solo piece exploring fluidity and space; filmed for the festival showcase.</p>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" tabindex="0">
+          <div class="row">
+            <div style="width:64px;flex-shrink:0;"><div class="avatar">MV</div></div>
+            <div style="flex:1">
+              <strong>Music Video — "Glow"</strong>
+              <div class="meta">Commercial • 2024-03-18</div>
+              <p class="small" style="margin-top:8px">Featured as lead dancer in an indie artist music video. Contact: director@studio.example</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Cypher Dance Network</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof initPortfolio === 'function') initPortfolio();
+    });
+  </script>
+</body>
+</html>
